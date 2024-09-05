@@ -1,0 +1,125 @@
+:root {
+  --font-main: 'Heebo', sans-serif;
+  --background-color:#f3f1f1;
+  --background-header-footer: white;
+  --list-itens-color: #333;
+  --list-hoover: #777;
+  --background-button: #00a8cc;
+  --background-posts: #edf7fa;
+  --title-color: #21243D;
+  --card-date: #142850;
+  --card-type: #8695A4;
+  --line-color: #E0E0E0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, button, input, textarea {
+  font-family: var(--font-main);
+}
+
+body {
+  background-color: var(--background-color);
+ 
+}
+
+header{ 
+  background-color:var(--background-header-footer);
+  height: 5rem;
+  font-family: var(--font-main);
+}
+
+header #navbar {
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+header #navbar .hamburguer-menu {
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+@media(max-width:740px) {
+  
+
+
+  .nav-list{
+    visibility: hidden;
+  }
+  
+  .nav-list.active {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30%;
+    position: absolute;
+    top:5rem;
+    right:0;
+    background-color: var(--background-header-footer);visibility: visible;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+  }
+
+  header #navbar .hamburguer-menu {
+    display: block;
+  }
+
+}
+
+header #navbar .nav-brand {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--list-itens-color);
+}
+
+header #navbar .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header #navbar .nav-list .nav-item a {
+  text-decoration: none;
+  color: var(--list-itens-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+header #navbar .nav-list .nav-item a:hover {
+  color:var(--list-hoover);
+  transition: 0.5s;
+}
+
+footer{
+    background-color: var(--background-header-footer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    
+    
+  }
+  
+  .links-footer {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap:2.5rem;
+    padding: 1rem;
+  }
+
+  .copy {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--title-color);
+  }
